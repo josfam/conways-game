@@ -4,6 +4,9 @@ An implementation of [Conway's game of life](https://en.wikipedia.org/wiki/Conwa
 \
 \
 This implementation allows the user to tweak all sorts of properties as they see fit.
+\
+\
+This project was also my final project for [Harvard's CS50P, Introduction to Programming with Python course](https://cs50.harvard.edu/python/)
 
 ---
 
