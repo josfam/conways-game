@@ -1,6 +1,5 @@
 import pytest
 from conway import Grid, ConwaysGameOfLife, Point, CellColours, Symbols, color_cell_row, show_cells, get_cells_from_file
-import io
 
 
 def test_correct_grid_is_constructed_when_given_a_string_as_input():
