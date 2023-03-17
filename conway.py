@@ -121,6 +121,7 @@ class ConwaysGameOfLife:
 
     @property
     def repeated_pattern_halted_the_game(self):
+        """Returns True if the game was halted because there was a repeated pattern. Returns False otherwise"""
         return self._repeated_pattern_halted_the_game
 
     def count_neighbours(self, grid: List[List[str]], location: Point) -> int:
