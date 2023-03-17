@@ -293,8 +293,8 @@ def main():
         "The defaults are '-' '■'. Include the quotes as well.",
     )
     parser.add_argument(
-        '-d',
-        '--default',
+        '-p',
+        '--preset',
         type=str,
         choices=list(GRIDS.keys()),
         help='One of the pre-defined grids from the collection',
@@ -314,15 +314,15 @@ def main():
     symbols = Symbols(*args.symbols) if args.symbols else SYMBOLS
     grid_source: Union[str, Dict[str, str]] = args.filename if args.filename else GRIDS
     mode = args.basic if args.basic else None
-    default_to_show = args.default if args.default else None
+    preset_to_show = args.preset if args.preset else None
     cell_colours = args.colour if args.colour else COLOURS
 
     print()  # prevent script command from being cleared from the terminal
 
     if not isinstance(cell_colours, CellColours):
         cell_colours = ALT_COLOURS[cell_colours]
-    if default_to_show:
-        cells = GRIDS[default_to_show]
+    if preset_to_show:
+        cells = GRIDS[preset_to_show]
     else:
         if isinstance(grid_source, str):
             cells = get_cells_from_file(grid_source)
